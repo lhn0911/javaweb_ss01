@@ -6,11 +6,10 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 @WebServlet(name = "Bai7", value = "/Bai7")
 
 public class Bai7 extends HttpServlet {
-    private static List<StudentTicket> studentList = new ArrayList<>();
+    private static final List<StudentTicket> studentList = new ArrayList<>();
     static {
         studentList.add(new StudentTicket("Nguyễn Văn A", "12A1", "Xe đạp", "75-A1 12345"));
         studentList.add(new StudentTicket("Trần Thị B", "11B2", "Xe máy", "75-B1 54321"));

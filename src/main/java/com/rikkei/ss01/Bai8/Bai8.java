@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 @WebServlet(name = "Bai8", value = "/Bai8")
 public class Bai8 extends HttpServlet {
-    private final ArrayList<Task> taskList = new ArrayList<>();
+    private ArrayList<Task> taskList = new ArrayList<>();
     private int idCounter = 1;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

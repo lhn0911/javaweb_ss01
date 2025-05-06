@@ -14,7 +14,8 @@
 <head>
     <title>To-Do List</title>
     <style>
-        body { font-family: Arial; }
+        body {
+            font-family: Arial, serif; }
         table, th, td { border: 1px solid black; border-collapse: collapse; }
         th, td { padding: 10px; }
         .doing { background-color: yellow; }
@@ -24,7 +25,9 @@
 <body>
 <h2>To-Do List</h2>
 <form action="Bai8" method="post">
-    <input type="text" name="jobName" placeholder="Enter new job" />
+    <label>
+        <input type="text" name="jobName" placeholder="Enter new job" />
+    </label>
     <button type="submit">Add</button>
 </form>
 
@@ -43,7 +46,7 @@
         <td><%= task.getStatus() %></td>
         <td>
             <% if (!task.getStatus().equals("Completed")) { %>
-            <form action="tasks" method="get" style="display:inline;">
+            <form action="Bai8" method="get" style="display:inline;">
                 <input type="hidden" name="id" value="<%= task.getId() %>"/>
                 <button type="submit">Change status</button>
             </form>
